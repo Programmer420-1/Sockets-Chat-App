@@ -35,5 +35,6 @@ Simple sockets chat app built from Python
 | 48620–49150 | Unassigned | These ports have not been registered |
 | 49151       | Reserved   | Reserved for future use              |
 
+Source: https://www.sciencedirect.com/topics/computer-science/registered-port
 #
 _Edited 12/11/2021_
