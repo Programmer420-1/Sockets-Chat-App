@@ -1,5 +1,5 @@
 # Sockets-Chat-App
-Simple sockets chat app built from Python
+Simple and basic sockets chat app built from Python
 <br>
 #
 ## Setup
