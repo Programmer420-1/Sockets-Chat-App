@@ -4,15 +4,13 @@ import subprocess
 import time
 import re
 
-HEADER = 64
+HEADER = 2048
 PORT = 5050
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
-SERVER = "localhost"
-ADDR = (SERVER, PORT)
 kick = False
 
-client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 
 def send(msg):
     global kick
@@ -100,11 +98,20 @@ def ClientBootup():
 
         
     
-
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print("[Client] Enter the IP and the port number of the host server")
+print("Host IP : ")
+SERVER = str(input(""))
+print("Port : ")
+PORT = int(input(""))
+ADDR = (SERVER, PORT)
 print("[Client] Connection establishing...")
-client.connect(ADDR)
-print(f"[Client] Connection to the host is established")
-ClientBootup()
-
+try:
+    client.connect(ADDR)
+    print(f"[Client] Connection to the host is established")
+    ClientBootup()
+except:
+    print("Connection Failed. Press any key to exit")
+    input("")
 
     

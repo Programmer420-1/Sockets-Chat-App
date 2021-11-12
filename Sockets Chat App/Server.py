@@ -6,8 +6,6 @@ import os
 ## SERVER SCRIPT
 
 HEADER = 2048
-SERVER = "localhost"
-PORT = 5050
 DISCONNECT_MESSAGE = "!DISCONNECT"
 FORMAT = "utf-8"
 all_connected = []
@@ -34,10 +32,8 @@ help = {
     "cls" : "-> Clear terminal screen",
     "echo" : "-> Repeat after user input on terminal"
 }
-ADDR = (SERVER,PORT)
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(ADDR)
+
 
 def bootup():
 
@@ -337,6 +333,18 @@ def interactBlock():
         else:
             print("[SERVER] Unknown Command Inputted")
 
-
-print("[SERVER] Server is starting...")
-bootup()
+#main
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+try:
+    print("[Client] Enter the IP and the port number of the host server")
+    print("Host IP : ")
+    SERVER = str(input(""))
+    print("Port : ")
+    PORT = int(input(""))
+    ADDR = (SERVER, PORT)
+    server.bind(ADDR)
+    print("[SERVER] Server is starting...")
+    bootup()
+except:
+    print("Server setup failed. Press any key to exit")
+    input("")
