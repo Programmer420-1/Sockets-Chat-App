@@ -4,12 +4,10 @@ Simple and basic sockets chat app built from Python
 #
 ## Setup
 ### Server Side
-1. Change the `host` to an appropriate IP in `Server.py`<br>
-2. Change the `port` in  `Server` if you wish to<br>
-3. Save the changes<br>
-4. Run the `Server.py` script,<br>
-5. Done<br>
-
+1. Run the `Server.py` script<br>
+2. Key in an appropriate IP or `localhost` if the other device is under the same network<br>
+3. Key in the port number<br>
+4. Server set up is done<br>
 ### Client Side
 1. Enter the IP and Port of the server you wish to connect in `Client.py`<br>
 2. Run the script<br>
@@ -37,4 +35,4 @@ Simple and basic sockets chat app built from Python
 
 Source: https://www.sciencedirect.com/topics/computer-science/registered-port
 #
-_Edited 12/11/2021_
+_Edited 13/11/2021_
